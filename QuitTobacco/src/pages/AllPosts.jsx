@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Container, PostCard } from '../components'
 import appwriteService from "../appwrite/config";
+import "../App2.css"
 
 function AllPosts() {
     const [posts, setPosts] = useState([])
@@ -13,15 +14,15 @@ function AllPosts() {
     }, [])
    
   return (
-    <div className='w-full py-8'>
-        <Container>
-            <div className='bg-red-400'>
-                <h1 className='text-5xl '>Blog Your Journey..</h1>
+    <div className=''>
+        <Container >
+            <div className='title'>
+                <h1 className='tit '>Blog Your Journey..</h1>
             </div>
-            <div className='flex flex-wrap'>
+            <div className='allpostscont'>
                 {posts.map((post) => (
-                    <div key={post.$id} className='p-2 w-1/4'>
-                        <PostCard {...post} />
+                    <div key={post.$id} className='postcont'>
+                        <PostCard {...post} className="Post"/>
                     </div>
                 ))}
             </div>

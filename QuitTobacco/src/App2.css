@@ -1,0 +1,39 @@
+.allpostscont{
+
+display: flex;
+flex-wrap: wrap;
+}
+.Post{
+    
+    background-color: aqua;
+}
+.postimage{
+   height: 180px;
+   width: 300px;
+   margin-top: 0px;
+   border-radius: 10px;
+}
+.posttitle{
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(48,107,149);
+}
+.postcard{
+    margin-top: 0px;
+}
+.postgod{
+    margin: 30px;
+    background-color: rgb(249, 254, 254);
+    height: 360px;
+    width: 330px;
+    padding-top: 20px;
+    padding-left: 15px;
+    border-radius: 10px;
+}
+.article{
+  font-size: 17px;
+}
+.articletext{
+    margin: 10px;
+    display: flex;
+}
