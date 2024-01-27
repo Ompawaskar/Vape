@@ -3,7 +3,7 @@ import React from 'react';
 export default function DocCard(props){
     return(
       <div className='bg-white'>
-       <div className="card">
+       <div className="card2">
          <div className="cardimage">
          <img src="randomuser.jpg" alt="" className='cardimg'/>   
          </div>

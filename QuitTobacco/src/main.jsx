@@ -12,6 +12,7 @@ import AllPosts from './pages/AllPosts.jsx'
 import AddPost from './pages/AddPost.jsx'
 import EditPost from './pages/EditPost.jsx'
 import Post from './pages/Post.jsx'
+import QuizPage from './pages/QuizPage.jsx'
 
 
 const router = createBrowserRouter([
@@ -63,6 +64,15 @@ const router = createBrowserRouter([
                 <AuthLayout authentication>
                     {" "}
                     <EditPost />
+                </AuthLayout>
+            ),
+        },
+        {
+            path: "/quiz",
+            element: (
+                <AuthLayout authentication>
+                    {" "}
+                    <QuizPage />
                 </AuthLayout>
             ),
         },

@@ -54,8 +54,6 @@ function Home() {
             
             /> 
           </div> 
-          <DocCard /> 
-          
           <AboutUs />
         </div>
     )

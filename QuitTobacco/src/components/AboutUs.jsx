@@ -3,7 +3,7 @@ import '../App.css'
 
 export default function AboutUs(){
     return(
-        <div className="bg-blue-200 text-7xl py-2 bold">
+        <div className="bg-white text-7xl py-2 bold">
             <div className="text-center">
                 <h1>About Us</h1>
             </div>

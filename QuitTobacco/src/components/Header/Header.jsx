@@ -43,6 +43,12 @@ function Header() {
         active: authStatus,
         className:"rightcomp"
     },
+    {
+        name: "Quit",
+        slug: "/quiz",
+        active: authStatus,
+        className:"rightcomp"
+    },
     ]
 
     return (
