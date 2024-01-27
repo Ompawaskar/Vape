@@ -3,6 +3,8 @@ import {Container,Logo,LogoutBtn}from '../index'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import '../../App.css'
+import logo from './logoqv.png'
 
 function Header() {
     const authStatus = useSelector((state) => {
@@ -14,66 +16,69 @@ function Header() {
       {
         name:"Home",
         slug:"/",
-        active:true
+        active:true,
+        className:"rightcomp"
       },
       {
         name:"Login",
         slug:"/login",
-        active: !authStatus
+        active: !authStatus,
+        className:"rightcomp"
       },
       {
         name:"Signup",
         slug:"/signup",
-        active: !authStatus
+        active: !authStatus,
+        className:"rightcomp"
       },
       {
         name: "All Posts",
         slug: "/all-posts",
         active: authStatus,
+        className:"rightcomp"
     },
     {
         name: "Add Post",
         slug: "/add-post",
         active: authStatus,
+        className:"rightcomp"
     },
     ]
 
     return (
-        <header className='py-3 shadow bg-gray-500'>
-        <Container>
-         <nav className='flex'>  
-            <div className='mr-4'>
+      <div>
+         <div className='nav'>
+            <div className='left'>
              <Link to={'/'}>
-                <Logo width='80px' />
+             <img src={logo} alt="" className="logo"/>
              </Link>
             </div>
 
-            <ul className='flex ml-auto'>
+            <div className='right'>
              {
                 navItems.map((item) => 
                     item.active ? (
-                        <li>
+                        <div className={`${item.className}`}>
                             <button
                             onClick={() => navigate(item.slug)}
-                            className='inline-block px-6 py-2 duration-200 hover:bg-blue-200 rounded-full'>
+                            className='navtext'>
                                 {item.name}
                             </button>
-                        </li>
+                        </div>
                     ) : null
                  )
 
              }
 
              {authStatus ? 
-             <li >
-               <LogoutBtn />
-             </li> : null}
+             <div className='rightcomp'>
+               <LogoutBtn className={"navtext"}/>
+             </div> : null}
 
-
-            </ul>
-         </nav>
-        </Container>
-        </header>
+            </div>
+            </div>
+     
+         </div>
     )
 }
 
