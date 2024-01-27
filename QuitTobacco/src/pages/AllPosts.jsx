@@ -24,6 +24,7 @@ function AllPosts() {
                     </div>
                 ))}
             </div>
+
          
     </div>
   )
